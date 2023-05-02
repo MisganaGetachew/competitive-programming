@@ -1,0 +1,4 @@
+# domino pilling
+M, N = map(int, input().split())
+area = M * N
+print(area//2)
