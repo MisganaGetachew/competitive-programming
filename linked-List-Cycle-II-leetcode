@@ -1,0 +1,23 @@
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def detectCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        hashset = set() 
+        headPtr = head
+        while headPtr not in hashset and headPtr: 
+            hashset.add(headPtr)
+            headPtr = headPtr.next
+        if headPtr:
+          return headPtr
+        else:
+            return
+            
+        
